@@ -4,11 +4,12 @@ import Button from '../UI/Button';
 import styles from './AddUser.module.css';
 
 const AddUser = (props) => {
-  const [userNameValue, setUserName] = useState('');
+  const [userName, setUserName] = useState('');
   const [userAge, setUserAge] = useState('');
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log(userName, userAge)
   };
 
   const userNameChangeHandler = (event) => {
@@ -26,7 +27,7 @@ const AddUser = (props) => {
         <input
           id="username"
           type="text"
-          value={userNameValue}
+          value={userName}
           onChange={userNameChangeHandler}
         />
         <label htmlFor="age" value={userAge}>
